@@ -1,0 +1,51 @@
+{
+  "paper": "Peng et al., Fingerprinting Deep Neural Networks Globally via Universal Adversarial Perturbations, CVPR 2022",
+  "code_url": "https://github.com/faiimea/UAP",
+  "metrics": [
+    {
+      "metric_id": "fingerprint_auc@cifar10",
+      "name": "fingerprint_auc",
+      "description": "AUC separating piracy from homologous models by fingerprint similarity",
+      "source": "Sec. 5, AUC comparison with IPGuard",
+      "reported_value": 1.0,
+      "scale": "fraction",
+      "direction": "higher",
+      "setting": {"dataset": "cifar10", "extra": {"n_fingerprints": 100}},
+      "reproduced": [
+        {"value": 0.985, "seed": 0, "code_modified": true, "notes": "EXAMPLE VALUE, not a real result. Agent added an AUC script."},
+        {"value": 0.972, "seed": 1, "code_modified": true, "notes": "EXAMPLE VALUE, not a real result."}
+      ]
+    },
+    {
+      "metric_id": "fingerprint_auc@fmnist",
+      "name": "fingerprint_auc",
+      "source": "Sec. 5, AUC comparison with IPGuard",
+      "reported_value": 1.0,
+      "scale": "fraction",
+      "direction": "higher",
+      "setting": {"dataset": "fmnist"},
+      "reproduced": []
+    },
+    {
+      "metric_id": "fingerprint_auc@tinyimagenet",
+      "name": "fingerprint_auc",
+      "source": "Sec. 5, AUC comparison with IPGuard",
+      "reported_value": 0.98,
+      "scale": "fraction",
+      "direction": "higher",
+      "setting": {"dataset": "tinyimagenet"},
+      "reproduced": []
+    },
+    {
+      "metric_id": "detection_rate@cifar10",
+      "name": "detection_rate",
+      "description": "Share of piracy models flagged by a two-sample t-test (alpha = 0.05, 20 fingerprints, 30 repeats)",
+      "source": "Sec. 5, t-test results",
+      "reported_value": 100.0,
+      "scale": "percent",
+      "direction": "higher",
+      "setting": {"dataset": "cifar10", "extra": {"alpha": 0.05}},
+      "reproduced": []
+    }
+  ]
+}
